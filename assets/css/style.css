@@ -501,3 +501,14 @@ body.about .btn-container {
     border: 1px solid #0d253f;
 }
 
+/* Remove underline from project titles */
+.project-link {
+  text-decoration: none;   /* removes underline */
+  color: inherit;          /* keeps your text color consistent */
+}
+
+/* Optional: add hover effect */
+.project-link:hover h2 {
+  text-decoration: underline; /* underline title only on hover */
+  color: #0097b2;             /* optional hover color */
+}
