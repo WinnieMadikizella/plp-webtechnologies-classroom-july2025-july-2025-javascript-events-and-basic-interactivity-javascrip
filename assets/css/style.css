@@ -1,0 +1,503 @@
+/* ===== 1. Global Styles & Utilities ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fdfdfd;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    color: #0d253f; /* Deep Navy */
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #0097b2; /* Bright Teal */
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p, li {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+/* Buttons */
+.btn-primary, .btn-secondary, .btn-outline {
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #0d253f;
+    color: #fff;
+    border: 1px solid #0d253f;
+}
+
+.btn-primary:hover {
+    background-color: #0097b2;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.btn-secondary {
+    background-color: #0d253f;
+    color: #0d253f;
+    border: 1px solid #0d253f;
+}
+
+.btn-secondary:hover {
+    background-color: #0097b2;
+}
+
+.btn-outline {
+    background: transparent;
+    color: #0d253f;
+    border: 1px solid #0d253f;
+}
+
+.btn-outline:hover {
+    background: #0d253f;
+    color: #fff;
+}
+
+
+/* ===== 2. Navigation ===== */
+.navbar {
+    background-color: #0d253f;
+    padding: 1rem 0;
+    text-align: right;
+}
+
+.navbar ul {
+    list-style: none;
+    display: inline-flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    background-color: #0097b2;
+    color: white;
+}
+
+
+/* ===== 3. Footer ===== */
+footer {
+    text-align: center;
+    background: #0d253f;
+    color: #fff;
+    padding: 1rem;
+}
+
+
+/* ===== 4. Content & Card Styles (for all pages) ===== */
+.content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: left;
+}
+
+.card, .project {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin: 2em 0;
+}
+
+.card:hover, .project:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+    border-radius: 8px;
+}
+
+.buttons {
+    text-align: center;
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+/* ===== 5. Responsive Styles ===== */
+@media (max-width: 992px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-left,
+    .hero-right {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+    
+    .btn-primary, .btn-secondary, .btn-outline {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* ===== INDEX.HTML (LANDING PAGE) STYLES ===== */
+
+.hero {
+    background: #f4f4f4;
+    padding: 50px 40px;
+    position: relative;
+}
+
+.hero-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Hero Left Column */
+.hero-left {
+    flex: 1;
+    max-width: 35%;
+    text-align: center;
+    background-color: #0d253f;
+    padding: 2rem;
+    color: #fff;
+    border-radius: 8px;
+}
+
+.hero-left h2 {
+    color: #fff;
+    font-weight: bold;
+}
+
+.hero-profile-pic {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #0097b2;
+    margin-bottom: 20px;
+}
+
+.tagline {
+    font-size: 0.9rem;
+    color: #0097b2;
+    margin-top: -8px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.social-icons {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+    color: #0097b2;
+}
+
+/* Hero Right Column */
+.hero-right {
+    flex: 1;
+    max-width: 65%;
+    padding: 2rem;
+}
+
+/* Specific headline for the landing page */
+.hero-right .headline {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+    color: #0d253f;
+    text-align: left;
+}
+
+.hero-right .sub-headline {
+    font-size: 1.15rem;
+    color: #555;
+    margin-bottom: 2em;
+    text-align: left;
+}
+
+/* Achievements section */
+.achievements-section {
+    margin-bottom: 2em;
+    text-align: left;
+}
+
+.achievements-heading {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #0d253f;
+    text-transform: uppercase;
+    margin-bottom: 0.5em;
+}
+
+.achievements-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.achievements-list li {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 0.5em;
+    position: relative;
+    padding-left: 2em;
+}
+
+.achievements-list li strong {
+    color: #0097b2;
+}
+
+.achievements-list li::before {
+    content: "✔";   /* replaces emoji ✅ */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #0097b2;  /* custom teal color */
+    font-weight: bold;
+}
+
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 20px;
+    justify-content: flex-start;
+}
+
+/* ===== ABOUT.HTML STYLES (Updated) ===== */
+.about-section {
+    max-width: 900px;
+    margin: 4em auto;
+    padding: 2em;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: left;
+}
+
+.about-section h1 {
+    font-size: 2.5em;
+    color: #0097b2;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.about-section h3 {
+    font-size: 1.5em;
+    color: #0d253f;
+    margin-top: 2em;
+}
+
+.about-section p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 1.5em;
+}
+
+.about-section strong {
+    color: #0d253f;
+}
+
+/* Updated List Styles for Columns */
+.solution-list {
+    list-style-type: none;
+    padding-left: 0;
+    display: grid; /* Enables CSS Grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Creates flexible columns */
+    gap: 20px; /* Adds space between the columns and rows */
+}
+
+.solution-list li {
+    background-color: #f9f9f9;
+    border-left: 4px solid #0097b2;
+    padding: 1.5em;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 0; /* Removes vertical margin to use grid gap */
+}
+
+.solution-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.solution-list li strong {
+    color: #0d253f;
+}
+
+/* Removes top and bottom margin from the main content sections */
+.about-section,
+.content,
+.hero {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* Reduces top margin on the footer */
+footer {
+    margin-top: 0;
+}
+
+/* Adjusts the padding on the hero section so it's not hugging the top of the page */
+.hero {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* ===== Buttons Styling ===== */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0d253f;   /* Default background */
+  color: #ffffff;              /* White text */
+  border: none;
+  border-radius: 6px;          /* Slightly rounded */
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect */
+.btn:hover {
+  background-color: #0097b2;   /* Hover background */
+  transform: translateY(-2px); /* Small lift */
+}
+
+/* Optional: active (click) effect */
+.btn:active {
+  transform: translateY(0); 
+}
+
+/* Center About Page CTA Buttons */
+.about .cta-buttons {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.about .cta-buttons .btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 24px;
+  background-color: #0d253f;   /* Default background */
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover Effect */
+.about .cta-buttons .btn:hover {
+  background-color: #0097b2;
+  transform: translateY(-2px);
+}
+
+/* ===== Center Buttons Only on About Page ===== */
+body.about .btn-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  gap: 15px;               /* Space between buttons */
+  margin: 20px 0;
+  flex-wrap: wrap;         /* Allow stacking on small screens */
+}
+
+/* Buttons take full width on small screens */
+@media (max-width: 600px) {
+  body.about .btn-container {
+    flex-direction: column; /* Stack vertically */
+    align-items: center;    /* Keep centered */
+  }
+
+  body.about .btn-container .btn {
+    width: 80%;            /* Optional: make buttons wider on mobile */
+    max-width: 300px;
+  }
+}
+
+.btn-secondary {
+    background-color: #0d253f;
+    color: #fff; /* 🔹 changed this line from #0d253f to #fff */
+    border: 1px solid #0d253f;
+}
+
