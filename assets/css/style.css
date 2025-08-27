@@ -501,14 +501,22 @@ body.about .btn-container {
     border: 1px solid #0d253f;
 }
 
-/* Remove underline from project titles */
-.project-link {
-  text-decoration: none;   /* removes underline */
-  color: inherit;          /* keeps your text color consistent */
+/* Center all H2 headings */
+.content h2,
+.hero-right h2,
+.project h2 {
+  text-align: center;
 }
 
-/* Optional: add hover effect */
-.project-link:hover h2 {
-  text-decoration: underline; /* underline title only on hover */
-  color: #0097b2;             /* optional hover color */
+.project h2 {
+  text-align: center;
 }
+
+.project a.project-link h2 {
+  text-align: center;
+}
+
+.project-buttons {
+  text-align: center;
+}
+
