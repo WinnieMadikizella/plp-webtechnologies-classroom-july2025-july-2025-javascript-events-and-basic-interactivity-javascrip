@@ -1,504 +1,332 @@
-/* ===== 1. Global Styles & Utilities ===== */
+my index.html is not mobile friendly
+
+/* ===== Global Styles ===== */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #fdfdfd;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fdfdfd;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+/* ===== Header & Navigation ===== */
+header {
+  background: #0d253f;
+  color: #fff;
+  padding: 1rem 2rem;
 }
 
-/* Headings */
-h1, h2, h3, h4, h5, h6 {
-    color: #0d253f; /* Deep Navy */
-    text-align: center;
-    margin-bottom: 1rem;
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-h1 {
-    font-size: 2.5rem;
-    color: #0097b2; /* Bright Teal */
+.logo {
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
-h2 {
-    font-size: 1.8rem;
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
 }
 
-h3 {
-    font-size: 1.5rem;
+header a {
+  color: #fff;
+  text-decoration: none;
 }
 
-p, li {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #555;
-    margin-bottom: 1rem;
+header a:hover,
+header .active {
+  text-decoration: underline;
 }
 
-/* Buttons */
-.btn-primary, .btn-secondary, .btn-outline {
-    padding: 0.8rem 1.5rem;
-    border-radius: 5px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.btn-primary {
-    background-color: #0d253f;
-    color: #fff;
-    border: 1px solid #0d253f;
-}
-
-.btn-primary:hover {
-    background-color: #0097b2;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-}
-
-.btn-secondary {
-    background-color: #0d253f;
-    color: #0d253f;
-    border: 1px solid #0d253f;
-}
-
-.btn-secondary:hover {
-    background-color: #0097b2;
-}
-
-.btn-outline {
-    background: transparent;
-    color: #0d253f;
-    border: 1px solid #0d253f;
-}
-
-.btn-outline:hover {
-    background: #0d253f;
-    color: #fff;
-}
-
-
-/* ===== 2. Navigation ===== */
-.navbar {
-    background-color: #0d253f;
-    padding: 1rem 0;
-    text-align: right;
-}
-
-.navbar ul {
-    list-style: none;
-    display: inline-flex;
-    gap: 2rem;
-    margin: 0;
-    padding: 0;
-}
-
-.navbar a {
-    text-decoration: none;
-    color: white;
-    font-size: 1rem;
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-}
-
-.navbar a:hover,
-.navbar a.active {
-    background-color: #0097b2;
-    color: white;
-}
-
-
-/* ===== 3. Footer ===== */
-footer {
-    text-align: center;
-    background: #0d253f;
-    color: #fff;
-    padding: 1rem;
-}
-
-
-/* ===== 4. Content & Card Styles (for all pages) ===== */
-.content {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 2rem;
-    text-align: left;
-}
-
-.card, .project {
-    background-color: #f9f9f9;
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    margin: 2em 0;
-}
-
-.card:hover, .project:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-.project img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 10px 0;
-    border-radius: 8px;
-}
-
-.buttons {
-    text-align: center;
-    margin-top: 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.5rem;
-}
-
-/* ===== 5. Responsive Styles ===== */
-@media (max-width: 992px) {
-    .hero-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero-left,
-    .hero-right {
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
-
-    .hero-buttons {
-        justify-content: center;
-    }
-}
-
-@media (max-width: 768px) {
-    .navbar ul {
-        flex-direction: column;
-        gap: 0.5rem;
-        text-align: center;
-    }
-    
-    .btn-primary, .btn-secondary, .btn-outline {
-        width: 100%;
-        text-align: center;
-    }
-}
-
-/* ===== INDEX.HTML (LANDING PAGE) STYLES ===== */
-
+/* ===== Hero Section ===== */
 .hero {
-    background: #f4f4f4;
-    padding: 50px 40px;
-    position: relative;
+  background: #f4f4f4;
+  padding: 50px 40px;
+  position: relative;
 }
 
 .hero-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 /* Hero Left Column */
 .hero-left {
-    flex: 1;
-    max-width: 35%;
-    text-align: center;
-    background-color: #0d253f;
-    padding: 2rem;
-    color: #fff;
-    border-radius: 8px;
-}
-
-.hero-left h2 {
-    color: #fff;
-    font-weight: bold;
+  flex: 1 1 25%;
+  text-align: center;
+  background-color: #0d253f;
+  padding: 2rem;
+  color: #fff;
+  border-radius: 8px;
 }
 
 .hero-profile-pic {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid #0097b2;
-    margin-bottom: 20px;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #0d253f;
+  margin-bottom: 20px;
 }
 
-.tagline {
-    font-size: 0.9rem;
-    color: #0097b2;
-    margin-top: -8px;
-    margin-bottom: 15px;
-    font-weight: bold;
+.hero-left h2 {
+  font-size: 1.2rem;
+  margin: 10px 0 15px;
+  font-weight: normal;
+  color: #fff;
 }
 
+/* Social Icons */
 .social-icons {
-    margin-top: auto;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
 }
 
 .social-icons a {
-    color: #fff;
-    font-size: 1.5rem;
-    transition: transform 0.2s, color 0.2s;
+  color: #fff;
+  font-size: 1.5rem;
+  transition: transform 0.2s, color 0.2s;
 }
 
 .social-icons a:hover {
-    transform: scale(1.2);
-    color: #0097b2;
+  transform: scale(1.2);
 }
 
 /* Hero Right Column */
 .hero-right {
-    flex: 1;
-    max-width: 65%;
-    padding: 2rem;
+  flex: 1 1 70%;
+  padding: 2rem;
 }
 
-/* Specific headline for the landing page */
-.hero-right .headline {
-    font-size: 2.5rem;
-    line-height: 1.2;
-    margin-bottom: 0.5em;
-    color: #0d253f;
-    text-align: left;
+.hero-right h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #0097b2;
 }
 
-.hero-right .sub-headline {
-    font-size: 1.15rem;
-    color: #555;
-    margin-bottom: 2em;
-    text-align: left;
+.hero-right h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #0d253f;
 }
 
-/* Achievements section */
-.achievements-section {
-    margin-bottom: 2em;
-    text-align: left;
+.hero-right p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: justify;
 }
 
-.achievements-heading {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #0d253f;
-    text-transform: uppercase;
-    margin-bottom: 0.5em;
-}
-
-.achievements-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.achievements-list li {
-    font-size: 1.1em;
-    color: #333;
-    margin-bottom: 0.5em;
-    position: relative;
-    padding-left: 2em;
-}
-
-.achievements-list li strong {
-    color: #0097b2;
-}
-
-.achievements-list li::before {
-    content: "✔";   /* replaces emoji ✅ */
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1em;
-    color: #0097b2;  /* custom teal color */
-    font-weight: bold;
-}
-
-
+/* Hero Buttons */
 .hero-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 20px;
-    justify-content: flex-start;
-}
-
-/* ===== ABOUT.HTML STYLES (Updated) ===== */
-.about-section {
-    max-width: 900px;
-    margin: 4em auto;
-    padding: 2em;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    text-align: left;
-}
-
-.about-section h1 {
-    font-size: 2.5em;
-    color: #0097b2;
-    text-align: center;
-    margin-bottom: 1em;
-}
-
-.about-section h3 {
-    font-size: 1.5em;
-    color: #0d253f;
-    margin-top: 2em;
-}
-
-.about-section p {
-    font-size: 1.1em;
-    line-height: 1.8;
-    margin-bottom: 1.5em;
-}
-
-.about-section strong {
-    color: #0d253f;
-}
-
-/* Updated List Styles for Columns */
-.solution-list {
-    list-style-type: none;
-    padding-left: 0;
-    display: grid; /* Enables CSS Grid layout */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Creates flexible columns */
-    gap: 20px; /* Adds space between the columns and rows */
-}
-
-.solution-list li {
-    background-color: #f9f9f9;
-    border-left: 4px solid #0097b2;
-    padding: 1.5em;
-    border-radius: 5px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-bottom: 0; /* Removes vertical margin to use grid gap */
-}
-
-.solution-list li:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.solution-list li strong {
-    color: #0d253f;
-}
-
-/* Removes top and bottom margin from the main content sections */
-.about-section,
-.content,
-.hero {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-/* Reduces top margin on the footer */
-footer {
-    margin-top: 0;
-}
-
-/* Adjusts the padding on the hero section so it's not hugging the top of the page */
-.hero {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-}
-
-/* ===== Buttons Styling ===== */
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #0d253f;   /* Default background */
-  color: #ffffff;              /* White text */
-  border: none;
-  border-radius: 6px;          /* Slightly rounded */
-  font-size: 16px;
-  font-weight: 500;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-/* Hover effect */
-.btn:hover {
-  background-color: #0097b2;   /* Hover background */
-  transform: translateY(-2px); /* Small lift */
-}
-
-/* Optional: active (click) effect */
-.btn:active {
-  transform: translateY(0); 
-}
-
-/* Center About Page CTA Buttons */
-.about .cta-buttons {
-  text-align: center;
-  margin-top: 30px;
-}
-
-.about .cta-buttons .btn {
-  display: inline-block;
-  margin: 10px;
-  padding: 12px 24px;
-  background-color: #0d253f;   /* Default background */
-  color: #ffffff;
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
-  font-weight: 500;
-  text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-/* Hover Effect */
-.about .cta-buttons .btn:hover {
-  background-color: #0097b2;
-  transform: translateY(-2px);
-}
-
-/* ===== Center Buttons Only on About Page ===== */
-body.about .btn-container {
   display: flex;
-  justify-content: center; /* Center horizontally */
-  gap: 15px;               /* Space between buttons */
-  margin: 20px 0;
-  flex-wrap: wrap;         /* Allow stacking on small screens */
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 20px;
 }
 
-/* Buttons take full width on small screens */
-@media (max-width: 600px) {
-  body.about .btn-container {
-    flex-direction: column; /* Stack vertically */
-    align-items: center;    /* Keep centered */
-  }
+.btn-primary {
+  background-color: #0d253f;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
 
-  body.about .btn-container .btn {
-    width: 80%;            /* Optional: make buttons wider on mobile */
-    max-width: 300px;
-  }
+.btn-primary:hover {
+  background-color: #173d66;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
 .btn-secondary {
-    background-color: #0d253f;
-    color: #fff; /* 🔹 changed this line from #0d253f to #fff */
-    border: 1px solid #0d253f;
+  background-color: #fff;
+  color: #0d253f;
+  border: 1px solid #0d253f;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  background-color: #e6e6e6;
+}
+
+.btn-outline {
+  background: #0d253f;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s;
+}
+
+.btn-outline:hover {
+  background: #173d66;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  background: #0d253f;
+  color: #fff;
+  padding: 1rem;
+}
+
+/* ===== Content Styles ===== */
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: left;
+  font-family: Arial, sans-serif;
+}
+
+.content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #0097b2;
+}
+
+.content h2,
+.content h3 {
+  margin-bottom: 1.5rem;
+  color: #0d253f;
+}
+
+.content p,
+.content li {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.content ul {
+  list-style: disc;
+  margin-left: 20px;
+  padding-left: 0;
+}
+
+/* Cards & Projects */
+.card, .project, .contact-socials, .contact-form {
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover,
+.project:hover,
+.contact-socials:hover,
+.contact-form:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Cards & Insights */
+.card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.key-insights {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+/* Project Buttons */
+.project-buttons a {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #fff;
+  background-color: #0d253f;
+  transition: background 0.3s ease;
+}
+
+.project-buttons a:hover {
+  background-color: #007a8f;
+}
+
+.project-buttons .btn-primary {
+  background-color: #0d253f;
+  color: #fff;
+}
+
+.project-buttons .btn-primary:hover {
+  background-color: #0097b2;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 992px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-left,
+  .hero-right {
+    flex: 1 1 100%;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  header nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .btn-primary, .btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Center all H2 headings */
@@ -520,3 +348,85 @@ body.about .btn-container {
   text-align: center;
 }
 
+/* ===== Extra Mobile-Friendly Adjustments ===== */
+@media (max-width: 992px) {
+  /* Stack hero columns vertically */
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-left,
+  .hero-right {
+    flex: 1 1 100%;
+    padding: 1.5rem;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Navigation adjustments */
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  /* Buttons full-width */
+  .btn-primary,
+  .btn-secondary,
+  .btn-outline {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Reduce padding on hero section */
+  .hero {
+    padding: 40px 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Hero section text & image scaling */
+  .hero-left {
+    padding: 1rem;
+  }
+
+  .hero-profile-pic {
+    width: 120px;
+    height: 120px;
+  }
+
+  .hero-left h2 {
+    font-size: 1rem;
+  }
+
+  .hero-right h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-right h3 {
+    font-size: 1.1rem;
+  }
+
+  .hero-right p,
+  .achievements-list li {
+    font-size: 0.95rem;
+  }
+
+  /* Hero buttons stacking & spacing */
+  .hero-buttons {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  /* Footer text scaling */
+  footer p {
+    font-size: 0.9rem;
+  }
+}
