@@ -1,0 +1,118 @@
+/* ===== GENERAL STYLING ===== */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+header, section, footer {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+/* ===== BUTTON STYLING ===== */
+button {
+  margin: 10px 5px 10px 0;
+  padding: 10px 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+/* Counter Button */
+#counterBtn {
+  background-color: #0d253f;
+}
+
+/* Light/Dark Toggle Button */
+#toggleModeBtn {
+  background-color: #0097b2;
+}
+
+/* Hover Effects */
+#counterBtn:hover {
+  background-color: #0097b2;
+  transform: scale(1.05);
+}
+
+#toggleModeBtn:hover {
+  background-color: #0d253f;
+  transform: scale(1.05);
+}
+
+/* ===== FAQ STYLING ===== */
+.faq-item {
+  margin-bottom: 10px;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 10px;
+  background-color: #0d253f;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.faq-question:hover {
+  background-color: #0097b2;
+}
+
+.faq-answer {
+  display: none;
+  padding: 10px;
+  border-left: 3px solid #0097b2;
+  background-color: #f4f4f4;
+  margin-top: 5px;
+  border-radius: 0 5px 5px 0;
+}
+
+/* ===== FORM STYLING ===== */
+input {
+  display: block;
+  margin: 5px 0;
+  padding: 8px;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #0097b2;
+  outline: none;
+}
+
+.form-message {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  display: none; /* Hidden by default */
+  font-weight: bold;
+}
+
+.form-message.success {
+  background-color: #0097b2;
+  color: #fff;
+}
+
+.form-message.error {
+  background-color: #d9534f;
+  color: #fff;
+}
